@@ -1,0 +1,8 @@
+public class PesoException extends Exception{
+	
+	public String mensagem;
+	PesoException()
+	{
+		this.mensagem = "Seu peso não pode ser menor que 10!!!";
+	}
+}
