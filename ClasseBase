@@ -1,0 +1,57 @@
+public class ClasseBase {
+
+	private String nomeCliente;
+	private int idadeCliente;
+	private float pesoCliente;
+	
+	
+	
+	public float getPesoCliente() {
+		return pesoCliente;
+	}
+
+	public void setPesoCliente(float p_pesoCliente) throws PesoException {
+		if(p_pesoCliente < 10) {
+			throw new PesoException();
+		}
+		else{
+			this.pesoCliente = p_pesoCliente;
+		}
+	}
+	
+	
+	//---------------------------------------------------------------------------------//
+	
+
+	public int getIdadeCliente() {
+		return idadeCliente;
+	}
+
+	public void setIdadeCliente(int p_idadeCliente) throws NegativoException {
+		if(p_idadeCliente <= 0) {
+			throw new NegativoException();
+		}
+		else{
+			this.idadeCliente = p_idadeCliente;
+		}
+	}
+	
+	
+	//---------------------------------------------------------------------------------//
+	
+
+	public String getNomeCliente() {
+		return this.nomeCliente;
+	}
+
+	public void setNomeCliente(String p_nomeCliente) throws FaltaDadosException {
+		if(p_nomeCliente.isEmpty()){
+			throw new FaltaDadosException();
+		}
+		else{
+			this.nomeCliente = p_nomeCliente;
+			System.out.println("Nome: " + p_nomeCliente);
+		}
+	
+	}
+}
