@@ -1,0 +1,8 @@
+public class FaltaDadosException extends Exception{
+
+	public String mensagem;
+	FaltaDadosException()
+	{
+		this.mensagem = "Nome do cliente é obrigatório!!!";
+	}
+}
