@@ -1,0 +1,9 @@
+public class NegativoException extends Exception {
+
+	public String mensagem;
+	NegativoException()
+	{
+		this.mensagem = "A idade tem que ser válida!!!";
+	}
+
+}
