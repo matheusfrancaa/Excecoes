@@ -1,0 +1,28 @@
+public class ExemploExcecao {
+
+	public static void main(String[] args) {
+		ClasseBase x = new ClasseBase();
+		
+		try {
+			x.setNomeCliente("");
+		} catch (FaltaDadosException e) {
+			System.out.println("Mensagem de erro 1: " + e.mensagem);
+		}
+
+		
+		try {
+			x.setIdadeCliente(-1);
+		} catch (NegativoException e) {
+			System.out.println("Mensagem de erro 2: " + e.mensagem);
+		}
+
+		
+		try {
+			x.setPesoCliente(9);
+		} catch (PesoException e) {
+			System.out.println("Mensagem de erro 3: " + e.mensagem);
+		}
+		
+		
+	}	
+}
